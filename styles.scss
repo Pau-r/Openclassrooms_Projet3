@@ -6,7 +6,7 @@ $fond-localisation: #eaeaea;
 $fond-description: #f6f6f6;
 $fond-footer: #282728;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
@@ -24,20 +24,24 @@ a {
     text-decoration: none;
 }
 
-header {
-    display: flex;
-    justify-content: center;
+.header {
+    text-align: center;
+    padding: 4%;
+
+    &__image {
+        width: 170px;
+    }
 }
 
-.explorer{
-   background-image: linear-gradient(to bottom right, $secondary, $primary);
+.description__explorer {
+    font-size: 17px;
+    background-image: linear-gradient(to bottom right, $secondary, $primary);
     border: none;
     text-align: center;
     text-decoration: none;
-    padding: 1%;
+    padding: 4% 6% 4% 6%;
     border-radius: 30px;
     color: $fond-description;
-    
 }
 
 .localisation {
@@ -46,91 +50,158 @@ header {
     align-items: center;
     background-color: $fond-localisation;
     padding: 2% 0 2% 0;
-}
+    color: $fond-footer;
+    padding: 3%;
 
-.localisation p {
-    padding-left: 2%;
+    &__ville {
+        padding-left: 5%;
+    }
 }
-
 
 .description {
     text-align: center;
     background-color: $fond-description;
+    padding-bottom: 12%;
+
+    &__titre {
+        font-weight: 700;
+        padding: 10% 14% 5% 14%;
+    }
+
+    &__sous-titre {
+        font-weight: 100;
+        font-size: 18px;
+        padding-bottom: 7%;
+    }
+
 }
 
-h1 {
-    font-weight: 500;
-}
-
-h2 {
-    font-weight: 300;
-}
-
-.bloc-restaurants{
-    background-color: $fond-description;
-}
-
-.nouveau{
-    background-color: $tertiary;
-    color: #34524a;
-    width: 100px;
-    z-index: 1;
-    position: absolute;
-   
-}
-
-.card {
-    width: 240px;
-    height: 210px;
-    background-color: #FFF;
-    border-radius: 25px;
-    box-shadow: 0 1px 10px #ccc;
-    margin: 2% 0 2% 0;
-}
-
-.card-image {
-    width: 100%;
-    height: 65%;
-    object-fit: cover;
-    border-radius: 20px 20px 0 0;
-}
-
-h4 {
-    font-weight: 500;
-    font-size: 16px;
-    padding: 1% 1% 1% 4%;
-    color: $typo;
-}
-
-h5 {
-    font-weight: 300;
-    font-size: 14px;
-    padding: 1% 1% 1% 4%;
-    color: $typo;
-}
-
-.card-heart{
-    color: $typo;
-    padding: 1% 1% 1% 4%;
-}
-
-.card-description{
+.fonctionnement {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+    width: 80%;
+
+    &__number {
+        background-color: $primary;
+        color: $fond-description;
+        border-radius: 100px;
+        width: 6%;
+        text-align: center;
+        position: relative;
+        margin-right: -2%;
+    }
+
+    &__btn {
+        background-color: $fond-description;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 1px 10px #ccc;
+        padding: 8% 13% 8% 13%;
+        font-size: 14px;
+        color: $fond-footer;
+        font-weight: 600;
+        width: 100%;
+    }
+
+    &__icon {
+        color: $fond-footer;
+        padding-right: 7%;
+    }
+
 }
 
-h6 {
-    font-family: 'Shrikhand', cursive;
-    color: $fond-description;
-    font-size: 18px;
+.bloc-fonctionnement__bloc-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.bloc-restaurants {
+    background-color: $fond-description;
+
+    &__nouveau {
+        background-color: $tertiary;
+        color: #34524a;
+        width: 100px;
+        z-index: 1;
+        position: absolute;
+    }
+
+    &__lien {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__card {
+        width: 90%;
+        height: 240px;
+        background-color: #FFF;
+        border-radius: 25px;
+        box-shadow: 0 1px 10px #ccc;
+        margin: 2% 0 2% 0;
+    }
+
+    &__image {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+
+    &__nom {
+        font-weight: 500;
+        font-size: 16px;
+        padding: 1% 1% 1% 4%;
+        color: $typo;
+    }
+
+    &__lieu {
+        font-weight: 300;
+        font-size: 14px;
+        padding: 1% 1% 1% 4%;
+        color: $typo;
+    }
+
+    &__card-heart {
+        color: $typo;
+        padding: 1% 1% 1% 4%;
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+//FOOTER
 
 footer {
     background-color: $fond-footer;
     color: $fond-localisation;
     font-size: 16px;
+    padding: 5%;
 }
 
-ul{
-    list-style-type: none;
+.nav {
+    &__titre {
+        font-family: 'Shrikhand', cursive;
+        color: $fond-description;
+        font-size: 18px;
+        padding-bottom: 3%;
+    }
+
+    &__icon {
+        padding-right: 3%;
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            padding-bottom: 2%;
+        }
+    }
 }

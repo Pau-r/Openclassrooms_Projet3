@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   margin: 0;
@@ -14,17 +14,21 @@ a {
   text-decoration: none;
 }
 
-header {
-  display: flex;
-  justify-content: center;
+.header {
+  text-align: center;
+  padding: 4%;
+}
+.header__image {
+  width: 170px;
 }
 
-.explorer {
+.description__explorer {
+  font-size: 17px;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border: none;
   text-align: center;
   text-decoration: none;
-  padding: 1%;
+  padding: 4% 6% 4% 6%;
   border-radius: 30px;
   color: #f6f6f6;
 }
@@ -35,91 +39,136 @@ header {
   align-items: center;
   background-color: #eaeaea;
   padding: 2% 0 2% 0;
+  color: #282728;
+  padding: 3%;
 }
-
-.localisation p {
-  padding-left: 2%;
+.localisation__ville {
+  padding-left: 5%;
 }
 
 .description {
   text-align: center;
   background-color: #f6f6f6;
+  padding-bottom: 12%;
+}
+.description__titre {
+  font-weight: 700;
+  padding: 10% 14% 5% 14%;
+}
+.description__sous-titre {
+  font-weight: 100;
+  font-size: 18px;
+  padding-bottom: 7%;
 }
 
-h1 {
-  font-weight: 500;
+.fonctionnement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5%;
+  width: 80%;
+}
+.fonctionnement__number {
+  background-color: #9356DC;
+  color: #f6f6f6;
+  border-radius: 100px;
+  width: 6%;
+  text-align: center;
+  position: relative;
+  margin-right: -2%;
+}
+.fonctionnement__btn {
+  background-color: #f6f6f6;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 1px 10px #ccc;
+  padding: 8% 13% 8% 13%;
+  font-size: 14px;
+  color: #282728;
+  font-weight: 600;
+  width: 100%;
+}
+.fonctionnement__icon {
+  color: #282728;
+  padding-right: 7%;
 }
 
-h2 {
-  font-weight: 300;
+.bloc-fonctionnement__bloc-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bloc-restaurants {
   background-color: #f6f6f6;
 }
-
-.nouveau {
+.bloc-restaurants__nouveau {
   background-color: #99E2D0;
   color: #34524a;
   width: 100px;
   z-index: 1;
   position: absolute;
 }
-
-.card {
-  width: 240px;
-  height: 210px;
+.bloc-restaurants__lien {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bloc-restaurants__card {
+  width: 90%;
+  height: 240px;
   background-color: #FFF;
   border-radius: 25px;
   box-shadow: 0 1px 10px #ccc;
   margin: 2% 0 2% 0;
 }
-
-.card-image {
+.bloc-restaurants__image {
   width: 100%;
-  height: 65%;
+  height: 70%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-
-h4 {
+.bloc-restaurants__nom {
   font-weight: 500;
   font-size: 16px;
   padding: 1% 1% 1% 4%;
   color: #000;
 }
-
-h5 {
+.bloc-restaurants__lieu {
   font-weight: 300;
   font-size: 14px;
   padding: 1% 1% 1% 4%;
   color: #000;
 }
-
-.card-heart {
+.bloc-restaurants__card-heart {
   color: #000;
   padding: 1% 1% 1% 4%;
 }
-
-.card-description {
+.bloc-restaurants__description {
   display: flex;
   justify-content: space-between;
-}
-
-h6 {
-  font-family: "Shrikhand", cursive;
-  color: #f6f6f6;
-  font-size: 18px;
 }
 
 footer {
   background-color: #282728;
   color: #eaeaea;
   font-size: 16px;
+  padding: 5%;
 }
 
-ul {
+.nav__titre {
+  font-family: "Shrikhand", cursive;
+  color: #f6f6f6;
+  font-size: 18px;
+  padding-bottom: 3%;
+}
+.nav__icon {
+  padding-right: 3%;
+}
+.nav ul {
   list-style-type: none;
+}
+.nav ul li {
+  padding-bottom: 2%;
 }
 
 /*# sourceMappingURL=styles.css.map */
