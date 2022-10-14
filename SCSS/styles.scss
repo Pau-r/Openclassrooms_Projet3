@@ -10,6 +10,38 @@ $fond-footer: #282728;
 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
+@mixin bloc-shadow {
+    box-shadow: 0 1px 10px #aaaaaa;
+}
+
+@mixin weight-title {
+    font-weight: 700;
+}
+
+@mixin weight-subtitle {
+    font-weight: 500;
+}
+
+@mixin weight-text {
+    font-weight: 300;
+}
+
+@mixin size-title {
+    font-size: 24px;
+}
+
+@mixin size-text {
+    font-size: 17px;
+}
+
+@mixin size-text-fonctionnement {
+    font-size: 15px;
+}
+
+@mixin size-subtitle {
+    font-size: 14px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +66,6 @@ a {
 }
 
 .description__explorer {
-    font-size: 17px;
     background-image: linear-gradient(to bottom right, $secondary, $primary);
     border: none;
     text-align: center;
@@ -42,19 +73,23 @@ a {
     padding: 4% 6% 4% 6%;
     border-radius: 30px;
     color: $fond-description;
+    @include bloc-shadow;
+    @include size-text;
 }
 
 .localisation {
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: $fond-localisation;
     padding: 2% 0 2% 0;
-    color: $fond-footer;
-    padding: 3%;
+    padding: 5%;
 
     &__ville {
-        padding-left: 5%;
+        text-align: center;
+        border: none;
+        background-color: $fond-localisation;
+        width: 40%;
+        @include size-text;
     }
 }
 
@@ -64,14 +99,14 @@ a {
     padding-bottom: 12%;
 
     &__titre {
-        font-weight: 700;
         padding: 10% 14% 5% 14%;
+        @include weight-title;
     }
 
     &__sous-titre {
-        font-weight: 100;
         font-size: 18px;
         padding-bottom: 7%;
+        @include weight-text;
     }
 
 }
@@ -79,53 +114,80 @@ a {
 .fonctionnement {
     display: flex;
     align-items: center;
-    margin-bottom: 5%;
-    width: 80%;
+    margin-bottom: 7%;
+    width: 90%;
 
     &__number {
         background-color: $primary;
         color: $fond-description;
-        border-radius: 100px;
-        width: 6%;
+        font-size: 80%;
+        border-radius: 100%;
+        width: 7%;
         text-align: center;
         position: relative;
-        margin-right: -2%;
+        margin-right: -3%;
+        padding: 1%;
+        
     }
 
     &__btn {
+        display: flex;
         background-color: $fond-description;
         border: none;
-        border-radius: 12px;
-        box-shadow: 0 1px 10px #ccc;
-        padding: 8% 13% 8% 13%;
-        font-size: 14px;
-        color: $fond-footer;
-        font-weight: 600;
+        border-radius: 20px;
+        padding: 8% 20% 8% 10%;
+        color: $fond-footer;     
         width: 100%;
+        @include bloc-shadow;
+        @include weight-subtitle;
+        @include size-text-fonctionnement;
     }
 
     &__icon {
         color: $fond-footer;
-        padding-right: 7%;
+        padding-right: 15%;
+        text-align: left;
+        font-size: 130%;
     }
 
 }
 
-.bloc-fonctionnement__bloc-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.bloc-fonctionnement {
+    padding: 7% 0 10% 0;
+
+    &__titre {
+        padding: 6%;
+        @include size-title;
+    }
+
+    &__bloc-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .bloc-restaurants {
     background-color: $fond-description;
+    padding: 4% 0 4% 0;
+    
+
+    &__titre{
+        padding: 6%;
+        @include size-title;
+    }
 
     &__nouveau {
         background-color: $tertiary;
         color: #34524a;
-        width: 100px;
         z-index: 1;
         position: absolute;
+        right: 15px;
+        top: 15px;
+        padding: 2% 3%;
+        border-radius: 3px;
+        @include size-subtitle;
+        
     }
 
     &__lien {
@@ -138,40 +200,48 @@ a {
         width: 90%;
         height: 240px;
         background-color: #FFF;
-        border-radius: 25px;
+        border-radius: 15px;
         box-shadow: 0 1px 10px #ccc;
-        margin: 2% 0 2% 0;
+        position: relative;
+        margin-bottom: 6%;
     }
 
     &__image {
         width: 100%;
         height: 70%;
         object-fit: cover;
-        border-radius: 20px 20px 0 0;
+        border-radius: 15px 15px 0 0;
     }
 
     &__nom {
-        font-weight: 500;
         font-size: 16px;
-        padding: 1% 1% 1% 4%;
         color: $typo;
+        padding-bottom: 2%;
+        @include weight-subtitle;
     }
 
     &__lieu {
-        font-weight: 300;
-        font-size: 14px;
-        padding: 1% 1% 1% 4%;
         color: $typo;
+        @include weight-text;
+        @include size-subtitle;
     }
 
     &__card-heart {
         color: $typo;
-        padding: 1% 1% 1% 4%;
     }
 
     &__description {
         display: flex;
         justify-content: space-between;
+    }
+
+    &__titres{
+        padding: 3%;
+    }
+
+    &__card-heart{
+        padding: 5% 6% 3% 3%;
+        font-size: 130%;
     }
 
 }
@@ -199,9 +269,11 @@ footer {
 
     ul {
         list-style-type: none;
+    }
 
-        li {
-            padding-bottom: 2%;
-        }
+    &__link li {
+        padding-bottom: 2%;
+        color: $fond-localisation;
+        text-decoration: none;
     }
 }
