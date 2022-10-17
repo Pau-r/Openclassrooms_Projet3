@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.header {
+  text-align: center;
+  padding: 4%;
+  position: relative;
+  box-shadow: 1px -2px 12px -3px rgba(54, 54, 54, 0.6705882353);
+}
+.header__image {
+  width: 170px;
+}
+
+.image-header__image {
+  width: 100%;
+  height: 20%;
+}
+
+footer {
+  background-color: #282728;
+  color: #eaeaea;
+  font-size: 16px;
+  padding: 5%;
+}
+
+.nav__titre {
+  font-family: "Shrikhand", cursive;
+  color: #f6f6f6;
+  padding-bottom: 3%;
+  font-size: 17px;
+}
+.nav__icon {
+  padding-right: 3%;
+}
+.nav ul {
+  list-style-type: none;
+}
+.nav__link li {
+  padding-bottom: 2%;
+  color: #eaeaea;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  background-color: #f6f6f6;
+  position: relative;
+  padding: 6% 4%;
+  border-radius: 40px 40px 0 0;
+  margin-top: -15%;
+}
+
+.restaurant {
+  display: flex;
+  align-items: center;
+}
+.restaurant__titre {
+  font-family: "Shrikhand", cursive;
+  padding-right: 10%;
+  font-size: 28px;
+}
+.restaurant__heart {
+  font-size: 150%;
+}
+
+.menu__titre {
+  padding: 6% 0 2% 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+.menu__border {
+  display: block;
+  width: 13%;
+  border-bottom: 3px solid #99E2D0;
+}
+
+.card__article {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: white;
+  border-radius: 15px;
+  padding: 3% 5%;
+  margin-top: 5%;
+  color: #000;
+  box-shadow: 0px 13px 20px -15px #aaaaaa;
+}
+.card__plat {
+  padding-bottom: 2%;
+  font-weight: 500;
+  font-size: 18px;
+}
+.card__accompagnement {
+  font-weight: 200;
+  font-size: 14px;
+}
+.card__prix {
+  font-weight: 500;
+}
+
+.bloc-button {
+  display: flex;
+  justify-content: center;
+  margin: 10% 0 13% 0;
+}
+.bloc-button__button {
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border: none;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  padding: 4% 6% 4% 6%;
+  border-radius: 30px;
+  color: #f6f6f6;
+  box-shadow: 5px 5px 8px 0px rgba(189, 189, 189, 0.6705882353);
+}/*# sourceMappingURL=menu.css.map */

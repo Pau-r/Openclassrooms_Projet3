@@ -1,0 +1,29 @@
+footer {
+    background-color: $fond-footer;
+    color: $fond-localisation;
+    font-size: 16px;
+    padding: 5%;
+}
+
+.nav {
+    &__titre {
+        font-family: 'Shrikhand', cursive;
+        color: $fond-description;
+        padding-bottom: 3%;
+        font-size: $size-text;
+    }
+
+    &__icon {
+        padding-right: 3%;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    &__link li {
+        padding-bottom: 2%;
+        color: $fond-localisation;
+        text-decoration: none;
+    }
+}
