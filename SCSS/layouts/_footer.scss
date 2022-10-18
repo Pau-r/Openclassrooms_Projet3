@@ -10,7 +10,7 @@ footer {
         font-family: 'Shrikhand', cursive;
         color: $fond-description;
         padding-bottom: 3%;
-        font-size: $size-text;
+        font-size: map-get($font-size, text);
     }
 
     &__icon {

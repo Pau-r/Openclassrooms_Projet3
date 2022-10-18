@@ -9,7 +9,7 @@
 .description__explorer {
     background-image: linear-gradient(to bottom right, $secondary, $primary);
     border: none;
-    font-size: $size-text;
+    font-size: map-get($font-size, text);
     text-align: center;
     text-decoration: none;
     padding: 4% 6% 4% 6%;
@@ -27,7 +27,7 @@
     &__ville {
         text-align: center;
         border: none;
-        font-size: $size-text;
+        font-size: map-get($font-size, text );
         background-color: $fond-localisation;
         width: 40%;
         
@@ -50,7 +50,7 @@
 
     &__sous-titre {
         padding-bottom: 7%;
-        font-size: $size-text;
+        font-size: map-get($font-size, text );
         @include weight-text;
         
     }
@@ -80,7 +80,7 @@
         display: flex;
         background-color: $fond-description;
         border: none;
-        font-size: $size-text-fonctionnement;
+        font-size: map-get($font-size, text-fonctionnement-accueil );
         border-radius: 20px;
         padding: 8% 20% 8% 8%;
         color: $fond-footer;
@@ -104,7 +104,7 @@
 
     &__titre {
         padding: 6%;
-       font-size: $size-title;
+       font-size: map-get($font-size , title-accueil );
     }
 
     &__bloc-btn {
@@ -121,7 +121,7 @@
 
     &__titre {
         padding: 6%;
-       font-size: $size-title;
+       font-size: map-get($font-size, title-accueil );
     }
 
     &__nouveau {
@@ -132,7 +132,7 @@
         top: 15px;
         padding: 2% 3%;
         border-radius: 3px;
-        font-size: $size-subtitle;
+        font-size: map-get($font-size, subtitle );
         @include weight-subtitle;
         @include new-dark;
     }
@@ -163,14 +163,14 @@
     &__nom {
         color: $typo;
         padding-bottom: 2%;
-        font-size: $size-text;
+        font-size: map-get($font-size, text );
         @include weight-subtitle;
         
     }
 
     &__lieu {
         color: $typo;
-        font-size: $size-subtitle;
+        font-size: map-get($font-size, subtitle );
         @include weight-text;
     }
 
@@ -190,6 +190,8 @@
     &__card-heart {
         padding: 5% 6% 3% 3%;
         font-size: 130%;
+
     }
+
 
 }

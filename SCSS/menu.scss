@@ -3,6 +3,7 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./base/normes";
+@import "./components/button-menu";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
@@ -17,28 +18,31 @@ main{
 .restaurant{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     &__titre{
         font-family:'Shrikhand', cursive ;
-        padding-right: 10%;
-        font-size: $size-title-restautant;     
+        padding: 0 8% 0 2%;
+        font-size: map-get($font-size, title-menu );     
     }
 
     &__heart{
+        padding-right: 8%;
         font-size: 150%;
     }
 }
 
 .menu{
     &__titre{
-        padding: 6% 0 2% 0;
-        font-size: 18px;
+        padding: 6% 0 2% 2%;
+        font-size: map-get($font-size , subtitle-title-menu );
     @include weight-text;
     }
 
     &__border{
         display: block;
         width: 13%;
+        margin-left: 2%;
         @include border-menu;
     } 
 }
@@ -60,36 +64,20 @@ main{
  &__plat{
     padding-bottom: 2%;
    font-weight: 500;
-   font-size: 18px;
+   font-size: map-get($font-size, text );
  }
 
  &__accompagnement{
     font-weight: 200;
-    font-size: $size-subtitle;
+    font-size: map-get($font-size , subtitle );
  }
 
  &__prix{
     font-weight: 500;
+    font-size: map-get($font-size, text );
  }
 
 }
 
-.bloc-button{
-  display: flex;
-  justify-content: center;
-  margin: 10% 0 13% 0;
-    &__button{
-    background-image: linear-gradient(to bottom right, $secondary, $primary);
-    border: none;
-    font-size: $size-text;
-    text-align: center;
-    text-decoration: none;
-    padding: 4% 6% 4% 6%;
-    border-radius: 30px;
-    color: $fond-description;
-    box-shadow: 5px 5px 8px 0px #bdbdbdab;
-    
-    
-}
-}
+
 

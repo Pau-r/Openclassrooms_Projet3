@@ -54,6 +54,23 @@ a {
   text-decoration: none;
 }
 
+.bloc-button {
+  display: flex;
+  justify-content: center;
+  margin: 10% 0 13% 0;
+}
+.bloc-button__button {
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border: none;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  padding: 4% 10% 4% 10%;
+  border-radius: 30px;
+  color: #f6f6f6;
+  box-shadow: 5px 5px 8px 0px rgba(189, 189, 189, 0.6705882353);
+}
+
 main {
   background-color: #f6f6f6;
   position: relative;
@@ -65,24 +82,27 @@ main {
 .restaurant {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .restaurant__titre {
   font-family: "Shrikhand", cursive;
-  padding-right: 10%;
-  font-size: 28px;
+  padding: 0 8% 0 2%;
+  font-size: 27px;
 }
 .restaurant__heart {
+  padding-right: 8%;
   font-size: 150%;
 }
 
 .menu__titre {
-  padding: 6% 0 2% 0;
+  padding: 6% 0 2% 2%;
   font-size: 18px;
   font-weight: 300;
 }
 .menu__border {
   display: block;
   width: 13%;
+  margin-left: 2%;
   border-bottom: 3px solid #99E2D0;
 }
 
@@ -100,7 +120,7 @@ main {
 .card__plat {
   padding-bottom: 2%;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 17px;
 }
 .card__accompagnement {
   font-weight: 200;
@@ -108,21 +128,5 @@ main {
 }
 .card__prix {
   font-weight: 500;
-}
-
-.bloc-button {
-  display: flex;
-  justify-content: center;
-  margin: 10% 0 13% 0;
-}
-.bloc-button__button {
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  border: none;
   font-size: 17px;
-  text-align: center;
-  text-decoration: none;
-  padding: 4% 6% 4% 6%;
-  border-radius: 30px;
-  color: #f6f6f6;
-  box-shadow: 5px 5px 8px 0px rgba(189, 189, 189, 0.6705882353);
 }/*# sourceMappingURL=menu.css.map */

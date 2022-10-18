@@ -23,6 +23,14 @@
     color: lighten($color, 30%);
 }
 
+@mixin button-color {
+    background-image: linear-gradient(to bottom right, $secondary, $primary);
+}
+
+@mixin button-light () {
+    background-image: linear-gradient(to bottom right, );
+}
+
 @mixin border-menu {
     border-bottom: 3px solid #99E2D0;
 }

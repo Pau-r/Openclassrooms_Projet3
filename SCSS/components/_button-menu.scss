@@ -1,0 +1,18 @@
+.bloc-button {
+  display: flex;
+  justify-content: center;
+  margin: 10% 0 13% 0;
+
+  &__button {
+    @include button-color;
+    border: none;
+    font-size: map-get($font-size, text);
+    text-align: center;
+    text-decoration: none;
+    padding: 4% 10% 4% 10%;
+    border-radius: 30px;
+    color: $fond-description;
+    box-shadow: 5px 5px 8px 0px #bdbdbdab;
+
+  }
+}
