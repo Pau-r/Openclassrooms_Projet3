@@ -27,10 +27,10 @@
     &__ville {
         text-align: center;
         border: none;
-        font-size: map-get($font-size, text );
+        font-size: map-get($font-size, text);
         background-color: $fond-localisation;
         width: 40%;
-        
+
     }
 }
 
@@ -50,9 +50,9 @@
 
     &__sous-titre {
         padding-bottom: 7%;
-        font-size: map-get($font-size, text );
+        font-size: map-get($font-size, text);
         @include weight-text;
-        
+
     }
 
 }
@@ -80,7 +80,7 @@
         display: flex;
         background-color: $fond-description;
         border: none;
-        font-size: map-get($font-size, text-fonctionnement-accueil );
+        font-size: map-get($font-size, text-fonctionnement-accueil);
         border-radius: 20px;
         padding: 8% 20% 8% 8%;
         color: $fond-footer;
@@ -104,7 +104,7 @@
 
     &__titre {
         padding: 6%;
-       font-size: map-get($font-size , title-accueil );
+        font-size: map-get($font-size , title-accueil);
     }
 
     &__bloc-btn {
@@ -118,10 +118,15 @@
     background-color: $fond-description;
     padding: 4% 0 4% 0;
 
+    &__bloc-card{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
 
     &__titre {
         padding: 6%;
-       font-size: map-get($font-size, title-accueil );
+        font-size: map-get($font-size, title-accueil);
     }
 
     &__nouveau {
@@ -132,7 +137,7 @@
         top: 15px;
         padding: 2% 3%;
         border-radius: 3px;
-        font-size: map-get($font-size, subtitle );
+        font-size: map-get($font-size, subtitle);
         @include weight-subtitle;
         @include new-dark;
     }
@@ -140,11 +145,11 @@
     &__lien {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        width: 90%;
     }
 
     &__card {
-        width: 90%;
+        width: 100%;
         height: 240px;
         background-color: #FFF;
         border-radius: 15px;
@@ -163,14 +168,14 @@
     &__nom {
         color: $typo;
         padding-bottom: 2%;
-        font-size: map-get($font-size, text );
+        font-size: map-get($font-size, text);
         @include weight-subtitle;
-        
+
     }
 
     &__lieu {
         color: $typo;
-        font-size: map-get($font-size, subtitle );
+        font-size: map-get($font-size, subtitle);
         @include weight-text;
     }
 
@@ -185,13 +190,25 @@
 
     &__titres {
         padding: 3%;
-    }
+    }       
 
-    &__card-heart {
+    &__heart{
         padding: 5% 6% 3% 3%;
         font-size: 130%;
-
+        cursor: pointer;
     }
 
+    &__empty{
+        color: $typo;
+        position: absolute;
+    
+    }
 
+    &__full{
+        opacity: 0%;
+        @include button-color;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+    }
 }

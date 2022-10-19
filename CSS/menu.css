@@ -110,7 +110,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  background-color: white;
+  background-color: #fff;
   border-radius: 15px;
   padding: 3% 5%;
   margin-top: 5%;

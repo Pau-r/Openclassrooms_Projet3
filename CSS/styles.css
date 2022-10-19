@@ -161,6 +161,11 @@ a {
   background-color: #f6f6f6;
   padding: 4% 0 4% 0;
 }
+.bloc-restaurants__bloc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .bloc-restaurants__titre {
   padding: 6%;
   font-size: 24px;
@@ -180,10 +185,10 @@ a {
 .bloc-restaurants__lien {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 90%;
 }
 .bloc-restaurants__card {
-  width: 90%;
+  width: 100%;
   height: 240px;
   background-color: #FFF;
   border-radius: 15px;
@@ -219,7 +224,19 @@ a {
 .bloc-restaurants__titres {
   padding: 3%;
 }
-.bloc-restaurants__card-heart {
+.bloc-restaurants__heart {
   padding: 5% 6% 3% 3%;
   font-size: 130%;
+  cursor: pointer;
+}
+.bloc-restaurants__empty {
+  color: #000;
+  position: absolute;
+}
+.bloc-restaurants__full {
+  opacity: 0%;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }/*# sourceMappingURL=styles.css.map */
