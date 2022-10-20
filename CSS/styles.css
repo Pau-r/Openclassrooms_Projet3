@@ -65,6 +65,10 @@ a {
   color: #f6f6f6;
   box-shadow: 5px 5px 8px 0px rgba(189, 189, 189, 0.6705882353);
 }
+.description__explorer:hover {
+  background-image: linear-gradient(to bottom right, #f7bfe7, #c8b2e2);
+  box-shadow: 0px 13px 20px -15px #4c4c4c;
+}
 
 .localisation {
   display: flex;
@@ -136,8 +140,13 @@ a {
   width: 100%;
   box-shadow: 0px 13px 20px -15px #aaaaaa;
 }
+.fonctionnement__btn:hover {
+  background-color: #ede5f5;
+}
+.fonctionnement__btn:hover .fonctionnement__icon {
+  color: #9356DC;
+}
 .fonctionnement__icon {
-  color: #282728;
   padding-right: 15%;
   text-align: left;
   font-size: 130%;
@@ -227,7 +236,6 @@ a {
 .bloc-restaurants__heart {
   padding: 5% 6% 3% 3%;
   font-size: 130%;
-  cursor: pointer;
 }
 .bloc-restaurants__empty {
   color: #000;
@@ -239,4 +247,8 @@ a {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: opacity 250ms;
+}
+.bloc-restaurants__full:active {
+  opacity: 1;
 }/*# sourceMappingURL=styles.css.map */

@@ -3,6 +3,11 @@
     ;
 }
 
+@mixin bloc-shado-darken {
+    box-shadow: 0px 13px 20px -15px #4c4c4c;
+    ;
+}
+
 @mixin weight-title {
     font-weight: 700;
 }
@@ -26,9 +31,8 @@
 @mixin button-color {
     background-image: linear-gradient(to bottom right, $secondary, $primary);
 }
-
-@mixin button-light () {
-    background-image: linear-gradient(to bottom right, );
+@mixin button-light {
+    background-image: linear-gradient(to bottom right, $secondary-light, $primary-light);
 }
 
 @mixin border-menu {
