@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
-main{
+main {
     background-color: $fond-description;
     position: relative;
     padding: 6% 4%;
@@ -15,100 +15,149 @@ main{
     margin-top: -15%;
 }
 
-.restaurant{
+.restaurant {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    &__titre{
-        font-family:'Shrikhand', cursive ;
+    &__titre {
+        font-family: 'Shrikhand', cursive;
         padding: 0 8% 0 2%;
-        font-size: map-get($font-size, title-menu );     
+        font-size: map-get($font-size, title-menu);
     }
 
-    &__heart{
+    &__heart {
         padding-right: 8%;
         font-size: 150%;
     }
 }
 
-.menu{
+.menu {
     animation: progress-menu 1000ms forwards;
     transform-origin: 50% top;
-    &__titre{
+
+    &__titre {
         padding: 6% 0 2% 2%;
-        font-size: map-get($font-size , subtitle-title-menu );
-    @include weight-text;
+        font-size: map-get($font-size , subtitle-title-menu);
+        @include weight-text;
     }
 
-    &__border{
+    &__border {
         display: block;
         width: 13%;
         margin-left: 2%;
         @include border-menu;
-    } 
+    }
 }
 
-.menu-plats{
+.menu-plats {
     opacity: 0;
     animation-delay: 350ms;
 }
 
-.menu-desserts{
+.menu-desserts {
     opacity: 0;
     animation-delay: 800ms;
 }
 
- 
-.card{
+.card {
 
- &__article{
+    &__article {
+        background-color: $fond-card-menu;
+        border-radius: 15px;
+        margin-top: 5%;
+        color: $typo;
+        display: flex;
+        justify-content: center;
+        @include bloc-shadow;
+    }
+}
+
+.card-text {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    background-color: $fond-card-menu;
-    border-radius: 15px;
+    flex: 1;
     padding: 3% 5%;
-    margin-top: 5%;
-    color: $typo;
-    @include bloc-shadow;
- }   
+    min-width: 0;
 
- &__plat{
-    padding-bottom: 2%;
-   font-weight: 500;
-   font-size: map-get($font-size, text );
- }
+    div {
+        min-width: 0;
+        flex-grow: 1;
+    }
 
- &__accompagnement{
-    font-weight: 200;
-    font-size: map-get($font-size , subtitle );
- }
+    &__plat {
+        padding-bottom: 2%;
+        font-weight: 500;
+        font-size: map-get($font-size, text);
+        @include animation-card;
+    }
 
- &__prix{
-    font-weight: 500;
-    font-size: map-get($font-size, text );
- }
+    &__accompagnement {
+        font-weight: 200;
+        font-size: map-get($font-size , subtitle);
+        @include animation-card;
+    }
 
+    &__prix {
+        font-weight: 500;
+        font-size: map-get($font-size, text);
+    }
+
+    &:hover+.card-icon {
+        width: 15%;
+        color: $fond-card-menu;
+
+        .card-icon__icon {
+            transform: rotate(360deg);
+        }
+
+    }
 }
 
-@keyframes progress-menu{
+
+
+.card-icon {
+
+    background-color: $tertiary;
+    width: 0;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    transition: all 0.75s;
+
+    &__icon {
+        font-size: 20px;
+        transform: rotate(0deg);
+        transition: transform 0.75s ease-in-out;
+    }
+}
+
+@keyframes progress-menu {
     0% {
         transform: scaleY(0);
         opacity: .1;
     }
+
     17% {
         transform: scaleY(.18);
     }
+
     24% {
         transform: scaleY(.4);
     }
+
     46% {
         transform: scaleY(.81);
     }
-    85%,100% {
+
+    85%,
+    100% {
         opacity: 1;
     }
+
     100% {
         transform: scaleY(1);
     }

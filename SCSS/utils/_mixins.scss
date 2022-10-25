@@ -38,3 +38,10 @@
 @mixin border-menu {
     border-bottom: 3px solid #99E2D0;
 }
+
+@mixin animation-card{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 5%;
+}
