@@ -3,6 +3,9 @@ footer {
     color: $fond-localisation;
     font-size: 16px;
     padding: 5%;
+    @include desktop-only{
+        padding: 3%;
+    }
 }
 
 .nav {
@@ -15,14 +18,24 @@ footer {
 
     &__icon {
         padding-right: 3%;
+        @include desktop-only{
+            padding-right: 1%;
+        }
+        @include tablet-only{
+            padding-right: 2%;
+        }
     }
 
     ul {
         list-style-type: none;
     }
 
-    &__link li {
+    li{
         padding-bottom: 2%;
+    }
+
+    &__link {
+        
         color: $fond-localisation;
         text-decoration: none;
     }

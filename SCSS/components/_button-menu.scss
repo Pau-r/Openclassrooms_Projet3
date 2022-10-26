@@ -13,11 +13,15 @@
     border-radius: 30px;
     color: $fond-description;
     box-shadow: 5px 5px 8px 0px #bdbdbdab;
-    &:hover{
+
+    &:hover {
       @include button-light;
       @include bloc-shado-darken;
-  }
 
-
+    }
+    @include desktop-only{
+      padding: 2% 5% 2% 5%;
+    }
+    
   }
 }

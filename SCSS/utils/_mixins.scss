@@ -45,3 +45,15 @@
     overflow: hidden;
     padding-right: 5%;
 }
+
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;        
+    }
+}
+
+@mixin tablet-only {
+    @media screen and (min-width :map-get($breakpoints, tablet-min)) and (max-width: map-get($breakpoints, tablet-max)){
+        @content;
+    }
+}
