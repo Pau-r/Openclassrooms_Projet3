@@ -1,5 +1,115 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@-webkit-keyframes background-animation {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes background-animation {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes loading {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0px);
+    visibility: visible;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(0px);
+    visibility: hidden;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0px);
+    visibility: visible;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(0px);
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes turnaround {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes turnaround {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes progress-menu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.1;
+  }
+  17% {
+    transform: scaleY(0.18);
+  }
+  24% {
+    transform: scaleY(0.4);
+  }
+  46% {
+    transform: scaleY(0.81);
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes progress-menu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.1;
+  }
+  17% {
+    transform: scaleY(0.18);
+  }
+  24% {
+    transform: scaleY(0.4);
+  }
+  46% {
+    transform: scaleY(0.81);
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 .header {
   text-align: center;
   padding: 4%;
@@ -116,8 +226,37 @@ main {
   font-size: 27px;
 }
 .restaurant__heart {
+  font-size: 130%;
   padding-right: 8%;
-  font-size: 150%;
+}
+
+.empty {
+  position: absolute;
+}
+
+.full {
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transform-origin: 50% bottom;
+  transform: scale(1);
+  transition: transform 700ms;
+  cursor: pointer;
+}
+.full:hover {
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
+}
+.full:active {
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
 }
 
 .menu {
@@ -214,48 +353,4 @@ main {
   font-size: 20px;
   transform: rotate(0deg);
   transition: transform 0.75s ease-in-out;
-}
-
-@-webkit-keyframes progress-menu {
-  0% {
-    transform: scaleY(0);
-    opacity: 0.1;
-  }
-  17% {
-    transform: scaleY(0.18);
-  }
-  24% {
-    transform: scaleY(0.4);
-  }
-  46% {
-    transform: scaleY(0.81);
-  }
-  85%, 100% {
-    opacity: 1;
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-
-@keyframes progress-menu {
-  0% {
-    transform: scaleY(0);
-    opacity: 0.1;
-  }
-  17% {
-    transform: scaleY(0.18);
-  }
-  24% {
-    transform: scaleY(0.4);
-  }
-  46% {
-    transform: scaleY(0.81);
-  }
-  85%, 100% {
-    opacity: 1;
-  }
-  100% {
-    transform: scaleY(1);
-  }
 }/*# sourceMappingURL=menu.css.map */

@@ -1,5 +1,115 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@-webkit-keyframes background-animation {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes background-animation {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes loading {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0px);
+    visibility: visible;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(0px);
+    visibility: hidden;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0px);
+    visibility: visible;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(0px);
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes turnaround {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes turnaround {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes progress-menu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.1;
+  }
+  17% {
+    transform: scaleY(0.18);
+  }
+  24% {
+    transform: scaleY(0.4);
+  }
+  46% {
+    transform: scaleY(0.81);
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes progress-menu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.1;
+  }
+  17% {
+    transform: scaleY(0.18);
+  }
+  24% {
+    transform: scaleY(0.4);
+  }
+  46% {
+    transform: scaleY(0.81);
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 .header {
   text-align: center;
   padding: 4%;
@@ -76,10 +186,10 @@ a {
   z-index: 10;
   width: 100%;
   height: auto;
+  position: fixed;
   background-color: #99E2D0;
   -webkit-animation: background-animation 0.1s ease-in-out 3s forwards;
           animation: background-animation 0.1s ease-in-out 3s forwards;
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,10 +337,6 @@ a {
   color: #f6f6f6;
   box-shadow: 5px 5px 8px 0px rgba(189, 189, 189, 0.6705882353);
 }
-.description__explorer:hover {
-  background-image: linear-gradient(to bottom right, #f7bfe7, #c8b2e2);
-  box-shadow: 0px 13px 20px -15px #4c4c4c;
-}
 @media screen and (min-width: 1008px) {
   .description__explorer {
     padding: 1% 3% 1% 3%;
@@ -240,6 +346,10 @@ a {
   .description__explorer {
     padding: 2% 4% 2% 4%;
   }
+}
+.description__explorer:hover {
+  background-image: linear-gradient(to bottom right, #f7bfe7, #c8b2e2);
+  box-shadow: 0px 13px 20px -15px #4c4c4c;
 }
 
 .fonctionnement {
@@ -292,6 +402,12 @@ a {
   background-color: #ede5f5;
 }
 .fonctionnement__btn:hover .fonctionnement__icon {
+  color: #9356DC;
+}
+.fonctionnement__btn:active {
+  background-color: #ede5f5;
+}
+.fonctionnement__btn:active .fonctionnement__icon {
   color: #9356DC;
 }
 @media screen and (min-width: 1008px) {
@@ -476,67 +592,12 @@ a {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
-
-@-webkit-keyframes background-animation {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes background-animation {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes loading {
-  0% {
-    opacity: 0.3;
-    transform: translateY(0px);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 0.3;
-    transform: translateY(0px);
-  }
-}
-@keyframes loading {
-  0% {
-    opacity: 0.3;
-    transform: translateY(0px);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 0.3;
-    transform: translateY(0px);
-  }
-}
-@-webkit-keyframes turnaround {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes turnaround {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.bloc-restaurants .full:active {
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
 }/*# sourceMappingURL=styles.css.map */

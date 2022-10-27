@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./base/normes";
@@ -26,9 +27,37 @@ main {
         font-size: map-get($font-size, title-menu);
     }
 
-    &__heart {
+    &__heart{
+        font-size: 130%;
         padding-right: 8%;
-        font-size: 150%;
+    }
+}
+
+.empty{
+    position: absolute;
+}
+
+.full {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    transform-origin: 50% bottom;
+    transform: scale(1);
+    transition: transform 700ms;
+    cursor: pointer;
+
+    &:hover {
+        @include button-color;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: scale(1.2);
+    }
+
+    &:active{
+        @include button-color;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: scale(1.2);
     }
 }
 
@@ -115,8 +144,6 @@ main {
     }
 }
 
-
-
 .card-icon {
 
     background-color: $tertiary;
@@ -132,33 +159,5 @@ main {
         font-size: 20px;
         transform: rotate(0deg);
         transition: transform 0.75s ease-in-out;
-    }
-}
-
-@keyframes progress-menu {
-    0% {
-        transform: scaleY(0);
-        opacity: .1;
-    }
-
-    17% {
-        transform: scaleY(.18);
-    }
-
-    24% {
-        transform: scaleY(.4);
-    }
-
-    46% {
-        transform: scaleY(.81);
-    }
-
-    85%,
-    100% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: scaleY(1);
     }
 }

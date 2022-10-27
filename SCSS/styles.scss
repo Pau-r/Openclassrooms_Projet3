@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./base/normes";
@@ -11,9 +12,9 @@
     z-index: 10;
     width: 100%;
     height: auto;
+    position: fixed;
     background-color: $tertiary;
     animation: background-animation 0.1s ease-in-out 3s forwards;
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +32,6 @@
         padding: 5px;
         opacity: 0.5;
         animation: loading 1.5s ease-in-out 2 forwards;
-
     }
 }
 
@@ -141,17 +141,16 @@
         border-radius: 30px;
         color: $fond-description;
         box-shadow: 5px 5px 8px 0px #bdbdbdab;
-
-        &:hover {
-            @include button-light;
-            @include bloc-shado-darken;
-        }
-
         @include desktop-only {
             padding: 1% 3% 1% 3%;
         }
         @include tablet-only{
             padding: 2% 4% 2% 4%;
+        }
+
+        &:hover {
+            @include button-light;
+            @include bloc-shado-darken;
         }
     }
 }
@@ -199,6 +198,14 @@
         @include bloc-shadow;
 
         &:hover {
+            background-color: $primary-hover-description;
+
+            .fonctionnement__icon {
+                color: $primary;
+            }
+        }
+
+        &:active{
             background-color: $primary-hover-description;
 
             .fonctionnement__icon {
@@ -379,44 +386,15 @@
             @include button-color;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            transform: scale(1.1);
+            transform: scale(1.2);
+        }
+
+        &:active{
+            @include button-color;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transform: scale(1.2);
         }
     }
 }
 
-@keyframes background-animation {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes loading {
-    0% {
-        opacity: .3;
-        transform: translateY(0px);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateY(-10px);
-    }
-
-    100% {
-        opacity: .3;
-        transform: translateY(0px);
-    }
-}
-
-@keyframes turnaround {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
