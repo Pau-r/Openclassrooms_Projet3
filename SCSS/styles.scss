@@ -76,20 +76,21 @@
         border: none;
         font-size: map-get($font-size, text);
         background-color: $fond-localisation;
-        width: 40%;
+        width: 47%;
 
         @include desktop-only {
             width: 9em;
         }
 
         @include tablet-only {
-            width: 15%;
+            width: 20%;
         }
     }
 }
 
 ::placeholder {
     color: $fond-footer;
+    opacity: 1;
 }
 
 .description {

@@ -1,9 +1,19 @@
 .header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 4%;
-    position: relative;
+   
     box-shadow: 1px -2px 12px -3px #363636ab;
     ;
+
+    a {
+        position: absolute;
+        left: 6%;
+    }
+    &__arrow {
+        color: $typo;      
+    }
 
     &__image {
         width: 170px;
@@ -11,8 +21,17 @@
 }
 
 .image-header{
+    
    &__image{
     width: 100%;
-    height: 20%;
+    height: 300px;
+    object-fit: cover;
+    @include desktop-only{
+        height: auto;
+    }
+    @include tablet-only{
+        height: auto;
+    }
+    
    }
 }
