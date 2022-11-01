@@ -1,0 +1,28 @@
+.empty {
+    position: absolute;
+    color: $typo;
+}
+
+.full {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    transform-origin: 50% bottom;
+    transform: scale(1);
+    transition: transform 700ms;
+    cursor: pointer;
+
+    &:hover {
+        @include button-color;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: scale(1.2);
+    }
+
+    &:active{
+        @include button-color;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: scale(1.2);
+    }
+}

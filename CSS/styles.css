@@ -124,7 +124,7 @@
 .header__arrow {
   color: #000;
 }
-.header__image {
+.header__logo {
   width: 170px;
 }
 
@@ -199,6 +199,36 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.empty {
+  position: absolute;
+  color: #000;
+}
+
+.full {
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transform-origin: 50% bottom;
+  transform: scale(1);
+  transition: transform 700ms;
+  cursor: pointer;
+}
+.full:hover {
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
+}
+.full:active {
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
 }
 
 .loading {
@@ -595,32 +625,4 @@ a {
 .bloc-restaurants__heart {
   padding: 5% 6% 3% 3%;
   font-size: 130%;
-}
-.bloc-restaurants .empty {
-  position: absolute;
-  color: #000;
-}
-.bloc-restaurants .full {
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  transform-origin: 50% bottom;
-  transform: scale(1);
-  transition: transform 700ms;
-  cursor: pointer;
-}
-.bloc-restaurants .full:hover {
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transform: scale(1.2);
-}
-.bloc-restaurants .full:active {
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transform: scale(1.2);
 }/*# sourceMappingURL=styles.css.map */

@@ -16,7 +16,7 @@
 
     &:hover {
       @include button-light;
-      @include bloc-shado-darken;
+      @include bloc-shadow-darken;
 
     }
     @include desktop-only{

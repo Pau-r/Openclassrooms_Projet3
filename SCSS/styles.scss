@@ -4,6 +4,7 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./base/normes";
+@import "./components/animation-heart";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
@@ -151,7 +152,7 @@
 
         &:hover {
             @include button-light;
-            @include bloc-shado-darken;
+            @include bloc-shadow-darken;
         }
     }
 }
@@ -369,33 +370,6 @@
         font-size: 130%;
     }
 
-    .empty {
-        position: absolute;
-        color: $typo;
-    }
 
-    .full {
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-        transform-origin: 50% bottom;
-        transform: scale(1);
-        transition: transform 700ms;
-        cursor: pointer;
-
-        &:hover {
-            @include button-color;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transform: scale(1.2);
-        }
-
-        &:active{
-            @include button-color;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transform: scale(1.2);
-        }
-    }
 }
 
